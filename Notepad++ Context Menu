@@ -1,0 +1,9 @@
+Windows Registry Editor Version 5.00
+NOTEPAD++ CONTEXT MENU
+https://superuser.com/a/1602075
+
+[HKEY_CLASSES_ROOT\*\shell\Edit with Notepad++]
+"Icon"="E:\\Program Files\\npp.8.5.6.portable\\notepad++.exe"
+
+[HKEY_CLASSES_ROOT\*\shell\Edit with Notepad++\command]
+@="\"E:\\Program Files\\npp.8.5.6.portable\\notepad++.exe\" \"%1\""
