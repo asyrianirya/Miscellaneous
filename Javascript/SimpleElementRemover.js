@@ -1,27 +1,21 @@
+const Elements = [".elementClass","#elementId","input[value='example']"];
 
-    const Elements = [".elementClass","#elementId","input[value='example']"];
-
-    Elements.forEach((elements) => {
-      document.querySelectorAll(elements).forEach((me) => {
-          deleteIfExist(me);
-      });
+    Elements.forEach((ads) => {
+        document.querySelectorAll(ads).forEach((me) => {
+            waitAndDelete(me)
+        });
     });
 
-    const deleteIfExist = (element) => {
-        waitForElementToExist(element).then(() => {
-            element.remove();
-        });
-    };
 
-    function waitForElementToExist(element) {
+    function waitAndDelete(element) {
         return new Promise((resolve) => {
             if (element) {
-                return resolve(element);
+                element.remove()
             }
 
             const observer = new MutationObserver(() => {
                 if (document.contains(element)) {
-                    resolve(element);
+                    element.remove()
                 }
             });
 
