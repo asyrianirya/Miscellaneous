@@ -20,8 +20,8 @@
                 classes.forEach((element) => {
                     div = document.createElement(type);
                     div.classList.add(element);
-                    appendStyle(element,styles);
                 });
+                appendStyle(element,styles);
             } else if (!Array.isArray(classes)) {
                 div = document.createElement(type);
                 div.classList.add(classes);
